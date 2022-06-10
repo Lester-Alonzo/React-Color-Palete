@@ -18,7 +18,7 @@ export default function Picker() {
     <div className={styles.container}>
       <input type='color' id='ui' hidden onChange={(e) => setColor(e.target.value)} ref={input} />
       <label htmlFor='ui' className={styles.cuadro} style={{ backgroundColor: color }}></label>
-      <div className={styles.current} style={{ backgroundColor: current, border: `1px solid ${current}` }}></div>
+      <div className={styles.current} style={{ backgroundColor: current}}></div>
       <CopyToClipboard text={color}>
         <button onClick={handleClick}>{color}</button>
       </CopyToClipboard>

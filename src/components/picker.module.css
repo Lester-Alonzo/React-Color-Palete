@@ -31,4 +31,5 @@
   margin: 0 auto;
   height: 100px;
   border-radius: 0 0 11px 11px;
+  box-shadow: 1px 1px 11px rgba(0, 0, 0, 0.64);
 }
