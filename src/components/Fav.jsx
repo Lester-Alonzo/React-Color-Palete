@@ -7,10 +7,9 @@ export default function Fav({ data }) {
   return (
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap', gap: '2px' }}>
       {data.map((col, i) => (
-        <CopyToClipboard text={col}>
+        <CopyToClipboard text={col} key={i} >
           <div
             onClick={notify}
-            key={i}
             style={{
               width: '100px',
               height: '100px',

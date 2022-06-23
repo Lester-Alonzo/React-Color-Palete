@@ -1,12 +1,9 @@
-import { useEffect } from 'react'
 import { useAppContext } from './Colorcontext.jsx'
 import Fav from './Fav.jsx'
 
 export default function Favoritos() {
   const { favoritos } = useAppContext()
-  useEffect(() => {
-    console.log(favoritos)
-  }, [])
+
   if (favoritos.length === 0) return <h3 style={{ textAlign: 'center' }}> No tienes favoritos guardados</h3>
 
   return (

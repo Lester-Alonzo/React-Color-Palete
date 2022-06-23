@@ -15,9 +15,13 @@ export default function Picker() {
     toast('copiado')
     addColors(color)
   }
+  function actives(){
+    console.log("click")
+    input.current.click()
+  }
   return (
     <div className={styles.container}>
-       <Imagepick/>
+       <Imagepick andle={actives}/>
         <span style={{textAlign:"center"}}>o</span>
         <input type='color' id='ui' hidden onChange={(e) => setColor(e.target.value)} ref={input} />
         <label htmlFor='ui' className={styles.cuadro} style={{ backgroundColor: color }}></label>

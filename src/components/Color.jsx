@@ -4,7 +4,6 @@ import toast from 'react-hot-toast'
 
 export default function Color() {
   const { colors, saveFav } = useAppContext()
-  console.log('soy Color')
   function notify() {
     toast('copy')
   }

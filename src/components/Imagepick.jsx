@@ -1,12 +1,13 @@
 import { useState } from "react"
 import { useAppContext } from './Colorcontext.jsx'
 
-export default function Imagepick() {
+export default function Imagepick({ andle }) {
   const { rl,changeUrl } = useAppContext()
   function handleChange(e) {
     const file = e.target.files[0]
     const url = URL.createObjectURL(file)
     changeUrl(url)
+    andle()
   }
   function handleClick(){
     changeUrl('')
