@@ -15,7 +15,7 @@
   place-content: center;
   flex-direction: column;
 }
-.container button{
+.container .btn{
   width: 50%;
   margin: 0 auto;
   border: none;
@@ -29,7 +29,7 @@
   cursor: pointer;
   position: relative;
 }
-.container button:hover::after{
+.container .btn:hover::after{
   content: 'Copy 💾';
   position: absolute;
   right: 1rem;
