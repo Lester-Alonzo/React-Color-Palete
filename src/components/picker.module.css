@@ -27,6 +27,13 @@
   margin-top: 1rem;
   font-weight: bold;
   cursor: pointer;
+  position: relative;
+}
+.container button:hover::after{
+  content: 'Copy 💾';
+  position: absolute;
+  right: 1rem;
+  color: #e3e3e3;
 }
 .current {
   width: 90%;
