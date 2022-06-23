@@ -22,6 +22,7 @@ export default function Fav({ data }) {
               fontWeight: 'bold',
               cursor: 'pointer'
             }}
+            title="Copy"
           >
             {col}
           </div>

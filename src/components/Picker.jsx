@@ -23,7 +23,7 @@ export default function Picker() {
         <label htmlFor='ui' className={styles.cuadro} style={{ backgroundColor: color }}></label>
         <div className={styles.current} style={{ backgroundColor: current}}></div>
       <CopyToClipboard text={color}>
-        <button onClick={handleClick}>{color}</button>
+        <button onClick={handleClick} title="Copy to clipboard">{color}</button>
       </CopyToClipboard>
     </div>
   )
