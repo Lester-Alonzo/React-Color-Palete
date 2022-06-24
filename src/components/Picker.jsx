@@ -1,4 +1,4 @@
-import React,{ useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import styles from './picker.module.css'
 import toast from 'react-hot-toast'
 import { useAppContext } from './Colorcontext.jsx'
@@ -15,19 +15,21 @@ export default function Picker() {
     toast('copiado')
     addColors(color)
   }
-  function actives(){
-    console.log("click")
+  function actives() {
+    console.log('click')
     input.current.click()
   }
   return (
     <div className={styles.container}>
-       <Imagepick andle={actives}/>
-        <span style={{textAlign:"center"}}>o</span>
-        <input type='color' id='ui' hidden onChange={(e) => setColor(e.target.value)} ref={input} />
-        <label htmlFor='ui' className={styles.cuadro} style={{ backgroundColor: color }}></label>
-        <div className={styles.current} style={{ backgroundColor: current}}></div>
+      <Imagepick andle={actives} />
+      <span style={{ textAlign: 'center' }}>o</span>
+      <input type='color' id='ui' hidden onChange={(e) => setColor(e.target.value)} ref={input} />
+      <label htmlFor='ui' className={styles.cuadro} style={{ backgroundColor: color }}></label>
+      <div className={styles.current} style={{ backgroundColor: current }}></div>
       <CopyToClipboard text={color}>
-        <button onClick={handleClick} className={styles.btn} title="Copy to clipboard">{color}</button>
+        <button onClick={handleClick} className={styles.btn} title='Copy to clipboard'>
+          {color}
+        </button>
       </CopyToClipboard>
     </div>
   )

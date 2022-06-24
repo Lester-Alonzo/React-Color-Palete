@@ -7,7 +7,7 @@ const initialState = sessionColors && sessionColors.length > 0 ? JSON.parse(sess
 const initialFavo = localFavoritos && localFavoritos.length > 0 ? JSON.parse(localFavoritos) : []
 const localCurrent = localStorage.getItem('current') ?? ''
 const currentInitial = localCurrent ? localCurrent : ''
-const sessionImg =sessionStorage.getItem('img') 
+const sessionImg = sessionStorage.getItem('img')
 const initialUrl = sessionImg ? sessionImg : ''
 
 export default function Colorcontext({ children }) {
@@ -28,7 +28,7 @@ export default function Colorcontext({ children }) {
   function handleCurrent(color) {
     setCurrent(color)
   }
-  function handleChangeUrl(url){
+  function handleChangeUrl(url) {
     setUrl(url)
   }
   useEffect(() => {

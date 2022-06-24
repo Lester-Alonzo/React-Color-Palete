@@ -1,26 +1,26 @@
-.cuadro{
+.cuadro {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 90%;
   height: 200px;
   margin: 1rem auto;
-  border-radius: 11px 11px 0 0 ;
+  border-radius: 11px 11px 0 0;
   box-shadow: 1px 1px 11px rgba(0, 0, 0, 0.64);
   cursor: pointer;
 }
 
-.container{
+.container {
   display: flex;
   place-content: center;
   flex-direction: column;
 }
-.container .btn{
+.container .btn {
   width: 50%;
   margin: 0 auto;
   border: none;
   background-color: #333;
-  padding: 1rem ;
+  padding: 1rem;
   border-radius: 11px;
   color: white;
   font-size: 1.2rem;
@@ -29,7 +29,7 @@
   cursor: pointer;
   position: relative;
 }
-.container .btn:hover::after{
+.container .btn:hover::after {
   content: 'Copy 💾';
   position: absolute;
   right: 1rem;

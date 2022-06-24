@@ -5,9 +5,17 @@ export default function Fav({ data }) {
     toast('Copy')
   }
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap', gap: '2px' }}>
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexWrap: 'wrap',
+        gap: '2px'
+      }}
+    >
       {data.map((col, i) => (
-        <CopyToClipboard text={col} key={i} >
+        <CopyToClipboard text={col} key={i}>
           <div
             onClick={notify}
             style={{
@@ -21,7 +29,7 @@ export default function Fav({ data }) {
               fontWeight: 'bold',
               cursor: 'pointer'
             }}
-            title="Copy"
+            title='Copy'
           >
             {col}
           </div>

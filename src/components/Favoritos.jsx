@@ -18,7 +18,14 @@ export default function Favoritos() {
       }}
     >
       {favoritos.map((fav, i) => (
-        <div key={i} style={{ border: '1px solid black', padding: '1rem', borderRadius: '11px' }}>
+        <div
+          key={i}
+          style={{
+            border: '1px solid black',
+            padding: '1rem',
+            borderRadius: '11px'
+          }}
+        >
           <h3 style={{ textAlign: 'center' }}>{fav.name}</h3>
           <Fav data={fav.color} />
         </div>
