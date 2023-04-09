@@ -6,7 +6,6 @@ import { CopyToClipboard } from 'react-copy-to-clipboard'
 import Imagepick from './Imagepick.jsx'
 
 export default function Picker() {
-  const input = useRef(null)
   const [color, setColor] = useState('#000')
 
   const { addColors, current, changeCurrent } = useAppContext()
@@ -15,15 +14,14 @@ export default function Picker() {
     toast('copiado')
     addColors(color)
   }
-  function actives() {
-    console.log('click')
-    input.current.click()
+  async  function actives(color) {
+    setColor(color)
   }
   return (
     <div className={styles.container}>
       <Imagepick andle={actives} />
       <span style={{ textAlign: 'center' }}>o</span>
-      <input type='color' id='ui' hidden onChange={(e) => setColor(e.target.value)} ref={input} />
+      <input type='color' id='ui' hidden onChange={(e) => setColor(e.target.value)}/>
       <label htmlFor='ui' className={styles.cuadro} style={{ backgroundColor: color }}></label>
       <div className={styles.current} style={{ backgroundColor: current }}></div>
       <CopyToClipboard text={color}>
